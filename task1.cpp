@@ -8,21 +8,23 @@ class Person
 protected:
     string name;
     int age;
-    static int counter;
+   
 
 public:
     Person()
     {
         name="";
         age=0;
-        counter++;
+      
+        
 
     }
     Person(string name, int age)
     {
         this->name=name;
         this->age=age;
-counter++;
+     
+
 
     }
     virtual void display()
@@ -43,9 +45,9 @@ public:
         diagnosis="";
 
     }
-    Patient(string name, int age, string diagnosis):Person(name,age)
+    Patient(string name, int age, string diagnosis,int patient_id):Person(name,age)
     {
-        this->patient_id=counter;
+        this->patient_id=patient_id;
         this->diagnosis=diagnosis;
 
     }
@@ -71,9 +73,9 @@ public:
         doctor_id=0;
         specialization="";
     }
-    Doctor(string name, int age, string specialization):Person(name,age)
+    Doctor(string name, int age, string specialization,int doctor_id):Person(name,age)
     {
-        this->doctor_id=counter;
+        this->doctor_id=doctor_id;
         this->specialization=specialization;
 
     }
@@ -89,16 +91,16 @@ public:
     }
 
 };
-int Person::counter=0;
+
 
 
 int main()
 {
 
-    Patient obj1("sama",19,"Diabetes");
-Patient obj2("malak",14,"animea");
-    Doctor obj3("aser",23,"Internist");
-     Doctor obj4("aysel",26,"dentist");
+    Patient obj1("hamsa",19,"Diabetes",1);
+Patient obj2("malak",14,"animea",2);
+    Doctor obj3("aser",23,"Internist",1);
+     Doctor obj4("aysel",26,"dentist",2);
     cout<<" Patients information: "<<endl<<endl;
     obj1.display();
     cout<<"------------------------------------------------------------------"<<endl;
