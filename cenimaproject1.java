@@ -1,4 +1,4 @@
-package com.mycompany.mavenproject1;
+
 
 import java.util.Scanner;
 
@@ -78,7 +78,7 @@ public class Mavenproject1 {
         if (ans.equals("YES") || ans.equals("Yes" )|| ans.equals ("yes")) {
             System.out.println("what are number of snack that you want ?");
             n = in.nextInt();
-        }
+        
         if (snack1.equals("pop corn(50$)")) {
             cost += n * 50;
 
@@ -91,7 +91,10 @@ public class Mavenproject1 {
         } else {
             cost += n * 25;
         }
-
+}
+else{
+    return;
+}
     }
 
     public static void print() {
